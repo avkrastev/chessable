@@ -1,0 +1,25 @@
+div.departments table thead tr th a {
+    color: black;
+}
+a.new-department,
+a.new-employee {
+    display: inline-block;
+    margin: 20px 0;
+}
+table thead tr th, 
+table tbody tr td {
+    vertical-align: middle !important;
+}
+div.loader {
+    position: absolute;
+    left: 48%;
+    top: 20%;
+}
+
+.newRecord {
+    width: 60%;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #eee;
+    box-shadow: 0 2px 3px #ccc;
+}

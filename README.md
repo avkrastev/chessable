@@ -1,1 +1,1 @@
-# chessable
+# chessable-hr-app
