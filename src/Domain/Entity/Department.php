@@ -4,9 +4,9 @@ namespace App\Domain\Entity;
 
 class Department
 {
-    public static string $tableName = 'departments';
+    public static $tableName = 'departments';
 
-    protected ?int $id;
+    protected $id;
 
     public const DEFAULT_ORDER_FIELD = 'id';
     public const DEFAULT_ORDER_TYPE = 'asc';
@@ -21,7 +21,7 @@ class Department
     
     public const ALLOWED_ORDER_TYPES = ['asc', 'desc'];
 
-    public static array $fillable = ['name', 'description'];
+    public static $fillable = ['name', 'description'];
 
     public function className()
     {

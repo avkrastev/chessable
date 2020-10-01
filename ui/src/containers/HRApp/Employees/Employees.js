@@ -91,6 +91,19 @@ class Employees extends Component {
             );
         }
 
+        let employee = null;
+        if (Object.keys(this.state.employees).length > 0) {
+            employee = this.state.employees.map( employee => (
+                <Employee
+                    key={employee.id}
+                    name={employee.first_name +' '+ employee.last_name}
+                    department={employee.department} 
+                    salary={employee.salary}                      
+                    edit={() => this.openModal(employee.id, 'edit')}
+                    delete={() => this.openModal(employee.id, 'delete')} />
+            ));
+        }
+
         if (!this.state.error) {
             return (
                 <div className="container">
@@ -113,15 +126,7 @@ class Employees extends Component {
                                 </tr>
                             </thead>
                             <tbody>
-                                {this.state.employees.map( employee => (
-                                    <Employee
-                                        key={employee.id}
-                                        name={employee.first_name +' '+ employee.last_name}
-                                        department={employee.department} 
-                                        salary={employee.salary}                      
-                                        edit={() => this.openModal(employee.id, 'edit')}
-                                        delete={() => this.openModal(employee.id, 'delete')} />
-                                ))}
+                                {employee}
                             </tbody>
                         </table>
                     </div>

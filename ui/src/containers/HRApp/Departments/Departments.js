@@ -111,6 +111,17 @@ class Subscribers extends Component {
             );
         }
 
+        let department = null;
+        if (Object.keys(this.state.departments).length > 0) {
+            department = this.state.departments.map( department => (
+                <Deparment
+                    key={department.id}
+                    name={department.name}
+                    description={department.description}                        
+                    delete={() => this.openModal(department.id, 'delete')} />
+            ))
+        }
+
         if (!this.state.error) {
             return (
                 <div className="container">
@@ -131,13 +142,7 @@ class Subscribers extends Component {
                                 </tr>
                             </thead>
                             <tbody>
-                                {this.state.departments.map( department => (
-                                    <Deparment
-                                        key={department.id}
-                                        name={department.name}
-                                        description={department.description}                        
-                                        delete={() => this.openModal(department.id, 'delete')} />
-                                ))}
+                                {department}
                             </tbody>
                         </table>
                     </div>

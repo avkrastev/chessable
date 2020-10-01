@@ -3,3 +3,6 @@
 .env
 
 /ui/node_modules
+.firebaserc
+firebase.json
+hosting.*

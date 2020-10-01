@@ -4,9 +4,9 @@ namespace App\Domain\Entity;
 
 class Employee
 {
-    public static string $tableName = 'employees';
+    public static $tableName = 'employees';
 
-    protected ?int $id;
+    protected $id;
 
     public const DEFAULT_ORDER_FIELD = 'id';
     public const DEFAULT_ORDER_TYPE = 'asc';
@@ -22,7 +22,7 @@ class Employee
     ];
     public const ALLOWED_ORDER_TYPES = ['asc', 'desc'];
 
-    public static array $fillable = ['department_id', 'first_name', 'last_name', 'salary'];
+    public static $fillable = ['department_id', 'first_name', 'last_name', 'salary'];
 
     public function className()
     {
