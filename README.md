@@ -2,9 +2,9 @@
 
 >You should write a simple HR app. There should be departments with names and employees with names and salaries. As a minimum it should be possible to add departments and employees, and to run the following reports:
 
-1. Show all departments along with the highest salary within each department. A department with no employees should show 0 as the highest salary.
+>1. Show all departments along with the highest salary within each department. A department with no employees should show 0 as the highest salary.
 
-2. List just those departments that have more than two employees that earn over 50k.
+>2. List just those departments that have more than two employees that earn over 50k.
 
 # Requirements
 
