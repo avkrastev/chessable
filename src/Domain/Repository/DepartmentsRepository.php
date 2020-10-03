@@ -50,7 +50,7 @@ class DepartmentsRepository extends AbstractRepository implements DepartmentsRep
                 {$this->model::$tableName}.*
             FROM
                 {$this->model::$tableName}
-            JOIN (SELECT * FROM {$employeesTable} GROUP BY department_id HAVING salary > {$salary} AND COUNT(*) > {$employeesNumber}) e 
+            JOIN (SELECT * FROM {$employeesTable} WHERE salary > {$salary} GROUP BY department_id HAVING COUNT(*) > {$employeesNumber}) e 
             ON e.department_id = {$this->model::$tableName}.id
             GROUP BY {$this->model::$tableName}.id;";
 
